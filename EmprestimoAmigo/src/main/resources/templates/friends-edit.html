@@ -1,0 +1,41 @@
+<html
+        xmlns:th="htttp://wwww.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout.html}">
+
+<head> <title>Edit Friend</title> </head>
+    <body>
+        <!-- Page Content-->
+        <section layout:fragment="body" class="py-5">
+            <h1>
+                EDITAR AMIGO
+            </h1>
+                <form class="form" role="form" method="post" th:action="@{/friends/{friendId}/edit(friendId=${friend.id})}" th:object="${friend}" >
+                    <input type="hidden" th:field="*{id}">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Name</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    id="name"
+                                    name="name"
+                                    th:field="*{name}"
+                                    placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-6 mb-3">
+                            <label for="telephone">Telephone Number</label>
+                            <input type="number"
+                                   class="form-control"
+                                   id="telephone"
+                                   name="telephone"
+                                   th:field="*{telephone}"
+                                   placeholder="Telephone">
+                        </div>
+                    </div>
+                    <button type="submit" class="form-button">Edit Friend</button>
+                </form>
+
+        </section>
+    </body>
+</html>

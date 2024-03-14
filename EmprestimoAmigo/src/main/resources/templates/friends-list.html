@@ -1,0 +1,45 @@
+<html
+        xmlns:th="htttp://wwww.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+
+        layout:decorate="~{layout.html}">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+    <title layout:title-pattern=" $CONTENT_TITLE - $LAYOUT_TITLE">Lista Amigos</title>
+</head>
+
+<body layout:fragment="body">
+
+<section>
+
+    <h1>
+        LISTA DE AMIGOS
+    </h1>
+
+    <div class="table-wrapper">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th> Nome </th>
+                    <th> Telefone</th>
+                    <th> Acao </th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr th:if="${friends.empty}">
+                <td colspan="2"> No Books Available </td>
+            </tr>
+            <tr th:each="friend : ${friends}">
+                <td><span th:text="${friend.name}"> Name </span></td>
+                <td><span th:text="${friend.telephone}"> Telephone </span></td>
+                <td> <a th:href="@{/friends/{friendId}/edit (friendId=${friend.id})}"> Editar</a>   </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+</body>
+</html>

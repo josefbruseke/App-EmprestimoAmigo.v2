@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="htttp://wwww.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+    <title layout:title-pattern=" $CONTENT_TITLE - $LAYOUT_TITLE">EmprestimoAmigo</title>
+</head>
+<nav class="navbar">
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Emprestimos</a></li>
+        <li><a href="">Livros</a></li>
+        <li><a th:href="@{/friends}">Amigos</a></li>
+    </ul>
+</nav>
+<body layout:fragment="body"></body>
+</html>

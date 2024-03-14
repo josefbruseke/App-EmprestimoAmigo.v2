@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 public class FriendDto {
     private Long id;
     private String name;
-    private String phone;
+    private String telephone;
     private LocalDateTime createdOn;
     private LocalDateTime updatedOn;
 }

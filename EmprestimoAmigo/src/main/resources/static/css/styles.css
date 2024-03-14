@@ -1,0 +1,149 @@
+body{
+    margin: 0px;
+    background-color: #cfe0e8;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+    color: #87bdd8 ;
+    font-weight: bold;
+}
+
+
+
+.navbar {
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    background-color: #87bdd8;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: right;
+
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 30px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #b7d7e8;
+}
+
+
+/* Responsivo abaixo de 600px */
+@media(max-width: 600px) {
+
+    .navbar {
+        overflow-x: auto;
+    }
+
+    .navbar li {
+        float: none;
+        flex: 1;
+    }
+
+    .navbar a {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+}
+
+
+.table-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: inline-block;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+}
+
+.content-table {
+    overflow: hidden;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+}
+
+
+.content-table thead tr {
+    background-color: #87bdd8;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 30px 40px;
+}
+
+.content-table tbody tr {
+    background-color: #b7d7e8;
+    border-bottom: 1px solid white;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 4px solid #87bdd8;
+}
+
+.form {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 200px;
+    margin-top: 100px;
+    background-color: #b7d7e8;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, .3);
+
+}
+
+.form-button {
+    cursor: pointer;
+    background-color: #87bdd8;
+    border: none;
+    margin-bottom: 20px;
+    position: relative;
+    top: 20px;
+    padding: 20px 50px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+
+}
+
+.form-button:hover {
+    background-color: #b7d7e8;
+}

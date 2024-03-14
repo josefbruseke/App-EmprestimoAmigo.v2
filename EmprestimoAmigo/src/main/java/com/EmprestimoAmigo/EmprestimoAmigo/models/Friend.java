@@ -21,7 +21,7 @@ public class Friend {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String phone;
+    private String telephone;
     @CreationTimestamp
     private LocalDateTime createdOn;
     @UpdateTimestamp
